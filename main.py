@@ -2,83 +2,89 @@ from fastapi import FastAPI, UploadFile, File
 from fastapi.middleware.cors import CORSMiddleware
 import cloudinary
 import cloudinary.uploader
+import random
 
 app = FastAPI()
 
-# CORS para frontend
+# =========================
+# CORS
+# =========================
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://yearends.netlify.app/"],  # Cambiar a dominio frontend en producción
+    allow_origins=["*"],  # en producción puedes restringir
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-# Configuración Cloudinary
+
+# =========================
+# Cloudinary config
+# =========================
 cloudinary.config(
     cloud_name="dsuh8ytfw",
     api_key="355974142769758",
     api_secret="Or-pP5Q-OiF1_aUiw4Fvr7vLs10"
 )
 
-
-# Datos de ejemplo de familias
-families_db = ["Ingrid", "Alexandra", "Ona", "Aitana"]
-
-# Endpoint de prueba raíz
+# =========================
+# Root
+# =========================
 @app.get("/")
 async def root():
     return {"status": "Backend operativo"}
 
-# Endpoint para subir selfie de la familia
+# =========================
+# Upload selfie
+# =========================
 @app.post("/upload")
 async def upload_selfie(file: UploadFile = File(...)):
     try:
-        result = cloudinary.uploader.upload(file.file, folder="villa-uploads/selfies")
-        url = result.get("secure_url")
+        # Subir imagen
+        result = cloudinary.uploader.upload(
+            file.file,
+            folder="villa-uploads/selfies"
+        )
 
-        # Aquí podrías hacer reconocimiento IA y devolver info
-        # Para pruebas, elegimos familia aleatoria
-        import random
-        family = random.choice(families_db)
-        special_message = ""
-        needs_products = family in ["Ingrid", "Alexandra"]  # ejemplo
-        message = f"Familia detectada: {family}"
+        url = result["secure_url"]
 
-        if family == "Alexandra":
-            special_message = "Se ha detectado un miembro de nacionalidad dudosa, seguridad pendiente."
+        # Simulación IA (orden de confianza)
+        predictions = [
+            {
+                "family": "Ingrid",
+                "confidence": 0.82,
+                "needs_products": True,
+                "special_message": ""
+            },
+            {
+                "family": "Alexandra",
+                "confidence": 0.61,
+                "needs_products": True,
+                "special_message": "Se ha detectado un miembro de nacionalidad dudosa."
+            },
+            {
+                "family": "Ona",
+                "confidence": 0.34,
+                "needs_products": False,
+                "special_message": ""
+            },
+            {
+                "family": "Aitana",
+                "confidence": 0.22,
+                "needs_products": False,
+                "special_message": ""
+            }
+        ]
+
+        # Barajamos para simular variación
+        random.shuffle(predictions)
 
         return {
-            "message": message,
-            "family": family,
-            "special_message": special_message,
-            "needs_products": needs_products,
+            "predictions": predictions,
             "url": url
         }
 
     except Exception as e:
-        return {"message": f"Error al subir la foto: {str(e)}"}
-
-# Endpoint para subir foto de productos
-@app.post("/upload-products")
-async def upload_products(file: UploadFile = File(...)):
-    try:
-        result = cloudinary.uploader.upload(file.file, folder="villa-uploads/products")
-        url = result.get("secure_url")
-        # Aquí podrías validar productos, devolver estado
-        message = "Foto de productos recibida y procesada."
-        return {"message": message, "url": url}
-
-    except Exception as e:
-        return {"message": f"Error al subir la foto de productos: {str(e)}"}
-
-# Endpoint para subir foto de celebración (uvas / fiesta)
-@app.post("/upload-celebration")
-async def upload_celebration(file: UploadFile = File(...)):
-    try:
-        result = cloudinary.uploader.upload(file.file, folder="villa-uploads/celebration")
-        url = result.get("secure_url")
-        message = "Foto de celebración recibida."
-        return {"message": message, "url": url}
-
-    except Exception as e:
-        return {"message": f"Error al subir la foto de celebración: {str(e)}"}
+        return {
+            "error": True,
+            "message": str(e)
+        }
