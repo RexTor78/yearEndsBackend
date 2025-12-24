@@ -8,7 +8,7 @@ app = FastAPI()
 # CORS para frontend
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://beautiful-ganache-c76dc4.netlify.app/"],  # Cambiar a dominio frontend en producción
+    allow_origins=["https://yearends.netlify.app/"],  # Cambiar a dominio frontend en producción
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
