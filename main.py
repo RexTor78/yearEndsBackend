@@ -3,13 +3,6 @@ from fastapi.middleware.cors import CORSMiddleware
 import cloudinary
 import cloudinary.uploader
 
-# Configuración Cloudinary
-cloudinary.config(
-    cloud_name="dsuh8ytfw",
-    api_key="355974142769758",
-    api_secret="Or-pP5Q-OiF1_aUiw4Fvr7vLs10"
-)
-
 app = FastAPI()
 
 # CORS para frontend
@@ -20,6 +13,13 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+# Configuración Cloudinary
+cloudinary.config(
+    cloud_name="dsuh8ytfw",
+    api_key="355974142769758",
+    api_secret="Or-pP5Q-OiF1_aUiw4Fvr7vLs10"
+)
+
 
 # Datos de ejemplo de familias
 families_db = ["Ingrid", "Alexandra", "Ona", "Aitana"]
