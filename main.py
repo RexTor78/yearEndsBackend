@@ -1,8 +1,8 @@
-from fastapi import FastAPI, UploadFile, File
+from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import cloudinary
 import cloudinary.uploader
-import random
+import os
 
 app = FastAPI()
 
@@ -11,19 +11,19 @@ app = FastAPI()
 # =========================
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # en producción puedes restringir
+    allow_origins=["*"],  # luego restringimos
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
 # =========================
-# Cloudinary config
+# Cloudinary config (ENV)
 # =========================
 cloudinary.config(
-    cloud_name="dsuh8ytfw",
-    api_key="355974142769758",
-    api_secret="Or-pP5Q-OiF1_aUiw4Fvr7vLs10"
+    cloud_name=os.getenv("CLOUDINARY_CLOUD_NAME"),
+    api_key=os.getenv("CLOUDINARY_API_KEY"),
+    api_secret=os.getenv("CLOUDINARY_API_SECRET"),
 )
 
 # =========================
@@ -38,16 +38,21 @@ async def root():
 # =========================
 @app.post("/upload")
 async def upload_selfie(file: UploadFile = File(...)):
+    if not file.content_type.startswith("image/"):
+        raise HTTPException(status_code=400, detail="Archivo no válido")
+
     try:
-        # Subir imagen
         result = cloudinary.uploader.upload(
             file.file,
-            folder="villa-uploads/selfies"
+            folder="villa-uploads/selfies",
+            resource_type="image"
         )
 
-        url = result["secure_url"]
+        url = result.get("secure_url")
+        if not url:
+            raise Exception("No se pudo obtener la URL")
 
-        # Simulación IA (orden de confianza)
+        # 🔮 Simulación IA ORDENADA
         predictions = [
             {
                 "family": "Ingrid",
@@ -75,16 +80,14 @@ async def upload_selfie(file: UploadFile = File(...)):
             }
         ]
 
-        # Barajamos para simular variación
-        random.shuffle(predictions)
-
         return {
-            "predictions": predictions,
-            "url": url
+            "url": url,
+            "predictions": predictions
         }
 
     except Exception as e:
-        return {
-            "error": True,
-            "message": str(e)
-        }
+        print("ERROR UPLOAD:", e)
+        raise HTTPException(
+            status_code=500,
+            detail="Error procesando la imagen"
+        )
