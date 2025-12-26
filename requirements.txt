@@ -4,7 +4,7 @@ uvicorn[standard]==0.25.0
 cloudinary>=1.44.1
 python-multipart==0.0.9
 
-torch==2.5.1
+torch==2.9.1
 torchvision==0.24.1
 facenet-pytorch==2.5.3
 
