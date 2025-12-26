@@ -1,0 +1,26 @@
+{
+  "Ingrid": {
+    "required": false
+  },
+  "Alexandra": {
+    "required": true,
+    "products": [
+      "2 botellas de cava",
+      "1 bolsa de hielo",
+      "Uvas (mínimo 12)"
+    ],
+    "mode": "accept_first"
+  },
+  "Ona": {
+    "required": true,
+    "products": [
+      "Vino tinto",
+      "Algo salado",
+      "Patatas fritas"
+    ],
+    "mode": "accept_second"
+  },
+  "Aitana": {
+    "required": false
+  }
+}

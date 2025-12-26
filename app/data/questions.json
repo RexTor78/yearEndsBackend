@@ -1,0 +1,23 @@
+{
+  "attitude": [
+    {
+      "id": 1,
+      "question": "¿Cómo actuarías si se acaba el cava?",
+      "options": [
+        "Compartir",
+        "Buscar más",
+        "Improvisar",
+        "Quejarse",
+        "Beber agua"
+      ]
+    }
+  ],
+  "trivia": [
+    {
+      "id": 101,
+      "question": "¿Cuántas uvas se comen en Nochevieja?",
+      "options": ["10", "11", "12", "13"],
+      "answer": 2
+    }
+  ]
+}

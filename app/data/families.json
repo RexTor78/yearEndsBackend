@@ -1,0 +1,341 @@
+{
+  "families": [
+    {
+      "id": "Can La Meua Estovalla",
+      "display_name": "Familia Can la meua estovalla",
+      "members": [
+        {
+          "name": "emma",
+          "photo": "family_photos\\Can La Meua Estovalla/emma.jpeg",
+          "sospechoso": false
+        },
+        {
+          "name": "nen",
+          "photo": "family_photos\\Can La Meua Estovalla/nen.png",
+          "sospechoso": false
+        },
+        {
+          "name": "Orsini",
+          "photo": "family_photos\\Can La Meua Estovalla/Orsini.jpeg",
+          "sospechoso": false
+        },
+        {
+          "name": "Orsini1",
+          "photo": "family_photos\\Can La Meua Estovalla/Orsini1.jpeg",
+          "sospechoso": false
+        },
+        {
+          "name": "Orsini2",
+          "photo": "family_photos\\Can La Meua Estovalla/Orsini2.png",
+          "sospechoso": false
+        },
+        {
+          "name": "par",
+          "photo": "family_photos\\Can La Meua Estovalla/par.jpeg",
+          "sospechoso": false
+        },
+        {
+          "name": "shere",
+          "photo": "family_photos\\Can La Meua Estovalla/shere.jpeg",
+          "sospechoso": false
+        },
+        {
+          "name": "shere1",
+          "photo": "family_photos\\Can La Meua Estovalla/shere1.jpeg",
+          "sospechoso": false
+        },
+        {
+          "name": "_sospechoso",
+          "photo": "family_photos\\Can La Meua Estovalla/sospechoso.jpeg",
+          "sospechoso": true
+        }
+      ]
+    },
+    {
+      "id": "Can Santos",
+      "display_name": "Familia Can santos",
+      "members": [
+        {
+          "name": "bruja",
+          "photo": "family_photos\\Can Santos/bruja.png",
+          "sospechoso": false
+        },
+        {
+          "name": "bruja1",
+          "photo": "family_photos\\Can Santos/bruja1.png",
+          "sospechoso": true
+        },
+        {
+          "name": "i",
+          "photo": "family_photos\\Can Santos/i.png",
+          "sospechoso": false
+        },
+        {
+          "name": "luna",
+          "photo": "family_photos\\Can Santos/luna.jpg",
+          "sospechoso": false
+        },
+        {
+          "name": "Luna",
+          "photo": "family_photos\\Can Santos/Luna.png",
+          "sospechoso": false
+        },
+        {
+          "name": "luna1",
+          "photo": "family_photos\\Can Santos/luna1.jpg",
+          "sospechoso": false
+        },
+        {
+          "name": "neizan",
+          "photo": "family_photos\\Can Santos/neizan.png",
+          "sospechoso": false
+        },
+        {
+          "name": "neizan1",
+          "photo": "family_photos\\Can Santos/neizan1.png",
+          "sospechoso": false
+        },
+        {
+          "name": "p",
+          "photo": "family_photos\\Can Santos/p.png",
+          "sospechoso": false
+        }
+      ]
+    },
+    {
+      "id": "CanCongelaParadas",
+      "display_name": "Familia Cancongelaparadas",
+      "members": [
+        {
+          "name": "aitana",
+          "photo": "family_photos\\CanCongelaParadas/aitana.png",
+          "sospechoso": false
+        },
+        {
+          "name": "aitana1",
+          "photo": "family_photos\\CanCongelaParadas/aitana1.png",
+          "sospechoso": false
+        },
+        {
+          "name": "elvia",
+          "photo": "family_photos\\CanCongelaParadas/elvia.png",
+          "sospechoso": false
+        },
+        {
+          "name": "elvia1",
+          "photo": "family_photos\\CanCongelaParadas/elvia1.png",
+          "sospechoso": false
+        },
+        {
+          "name": "elvia2",
+          "photo": "family_photos\\CanCongelaParadas/elvia2.png",
+          "sospechoso": false
+        },
+        {
+          "name": "Luis",
+          "photo": "family_photos\\CanCongelaParadas/Luis.png",
+          "sospechoso": false
+        },
+        {
+          "name": "Luis1",
+          "photo": "family_photos\\CanCongelaParadas/Luis1.png",
+          "sospechoso": false
+        },
+        {
+          "name": "Luis2",
+          "photo": "family_photos\\CanCongelaParadas/Luis2.png",
+          "sospechoso": false
+        },
+        {
+          "name": "sospechoso",
+          "photo": "family_photos\\CanCongelaParadas/sospechoso.png",
+          "sospechoso": false
+        }
+      ]
+    },
+    {
+      "id": "CanParacetamotor",
+      "display_name": "Familia Canparacetamotor",
+      "members": [
+        {
+          "name": "merce",
+          "photo": "family_photos\\CanParacetamotor/merce.png",
+          "sospechoso": false
+        },
+        {
+          "name": "merce1",
+          "photo": "family_photos\\CanParacetamotor/merce1.png",
+          "sospechoso": false
+        },
+        {
+          "name": "merce2",
+          "photo": "family_photos\\CanParacetamotor/merce2.png",
+          "sospechoso": false
+        },
+        {
+          "name": "merce3.",
+          "photo": "family_photos\\CanParacetamotor/merce3..png",
+          "sospechoso": false
+        },
+        {
+          "name": "merce4",
+          "photo": "family_photos\\CanParacetamotor/merce4.png",
+          "sospechoso": false
+        },
+        {
+          "name": "ona",
+          "photo": "family_photos\\CanParacetamotor/ona.png",
+          "sospechoso": false
+        },
+        {
+          "name": "risco",
+          "photo": "family_photos\\CanParacetamotor/risco.png",
+          "sospechoso": false
+        },
+        {
+          "name": "risco1",
+          "photo": "family_photos\\CanParacetamotor/risco1.png",
+          "sospechoso": false
+        },
+        {
+          "name": "sospechoso",
+          "photo": "family_photos\\CanParacetamotor/_sospechoso.png",
+          "sospechoso": true
+        }
+      ]
+    },
+    {
+      "id": "CanSomriureElectric",
+      "display_name": "Familia Cansomriureelectric",
+      "members": [
+        {
+          "name": "ingrid",
+          "photo": "family_photos\\CanSomriureElectric/ingrid.png",
+          "sospechoso": false
+        },
+        {
+          "name": "ingrid2",
+          "photo": "family_photos\\CanSomriureElectric/ingrid2.png",
+          "sospechoso": false
+        },
+        {
+          "name": "mivi",
+          "photo": "family_photos\\CanSomriureElectric/mivi.png",
+          "sospechoso": false
+        },
+        {
+          "name": "mivi1",
+          "photo": "family_photos\\CanSomriureElectric/mivi1.png",
+          "sospechoso": false
+        },
+        {
+          "name": "mivi2",
+          "photo": "family_photos\\CanSomriureElectric/mivi2.png",
+          "sospechoso": false
+        },
+        {
+          "name": "mivi3",
+          "photo": "family_photos\\CanSomriureElectric/mivi3.png",
+          "sospechoso": false
+        },
+        {
+          "name": "sospechoso",
+          "photo": "family_photos\\CanSomriureElectric/sospechoso.png",
+          "sospechoso": true
+        },
+        {
+          "name": "Uri",
+          "photo": "family_photos\\CanSomriureElectric/Uri.png",
+          "sospechoso": false
+        },
+        {
+          "name": "Uri1",
+          "photo": "family_photos\\CanSomriureElectric/Uri1.png",
+          "sospechoso": false
+        },
+        {
+          "name": "Uri2",
+          "photo": "family_photos\\CanSomriureElectric/Uri2.png",
+          "sospechoso": false
+        },
+        {
+          "name": "Uri3",
+          "photo": "family_photos\\CanSomriureElectric/Uri3.png",
+          "sospechoso": false
+        },
+        {
+          "name": "UriMivi",
+          "photo": "family_photos\\CanSomriureElectric/UriMivi.png",
+          "sospechoso": false
+        }
+      ]
+    },
+    {
+      "id": "CanTallaAtalaya",
+      "display_name": "Familia Cantallaatalaya",
+      "members": [
+        {
+          "name": "ale",
+          "photo": "family_photos\\CanTallaAtalaya/ale.png",
+          "sospechoso": false
+        },
+        {
+          "name": "alex",
+          "photo": "family_photos\\CanTallaAtalaya/alex.png",
+          "sospechoso": false
+        },
+        {
+          "name": "Florin",
+          "photo": "family_photos\\CanTallaAtalaya/Florin.png",
+          "sospechoso": false
+        },
+        {
+          "name": "Florin1",
+          "photo": "family_photos\\CanTallaAtalaya/Florin1.png",
+          "sospechoso": false
+        },
+        {
+          "name": "Florin2",
+          "photo": "family_photos\\CanTallaAtalaya/Florin2.png",
+          "sospechoso": false
+        },
+        {
+          "name": "Florin3",
+          "photo": "family_photos\\CanTallaAtalaya/Florin3.png",
+          "sospechoso": false
+        },
+        {
+          "name": "image",
+          "photo": "family_photos\\CanTallaAtalaya/image.png",
+          "sospechoso": false
+        },
+        {
+          "name": "misu",
+          "photo": "family_photos\\CanTallaAtalaya/misu.png",
+          "sospechoso": false
+        },
+        {
+          "name": "misu1",
+          "photo": "family_photos\\CanTallaAtalaya/misu1.png",
+          "sospechoso": false
+        },
+        {
+          "name": "misu2",
+          "photo": "family_photos\\CanTallaAtalaya/misu2.png",
+          "sospechoso": false
+        },
+        {
+          "name": "misu3",
+          "photo": "family_photos\\CanTallaAtalaya/misu3.png",
+          "sospechoso": false
+        },
+        {
+          "name": "sospechoso",
+          "photo": "family_photos\\CanTallaAtalaya/sospechoso.png",
+          "sospechoso": false
+        }
+      ],
+      "special_message": ["A sido verificada y aprobada su solicitud de acceso, pero se ha detectado un miembro de una nacionalidad clasificada. Por la seguridad de todos procederemos a una estricta vigilancia."]
+    }
+  ]
+}

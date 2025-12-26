@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "type": "choice",
+    "text": "¿Cuál es la tradición principal de la villa en Nochevieja?",
+    "options": [
+      { "id": "A", "text": "Comer 12 uvas", "tag": "tradicion", "message": "🍇 Se registra conocimiento de tradición." },
+      { "id": "B", "text": "Beber champán", "tag": "fiesta", "message": "🥂 Se registra enfoque fiestero." },
+      { "id": "C", "text": "Dormir temprano", "tag": "tranquilo", "message": "😴 Sistema detecta relajación." }
+    ]
+  },
+  {
+    "id": 2,
+    "type": "text",
+    "text": "Explica brevemente cómo actuarías para mantener la armonía durante la celebración."
+  },
+  {
+    "id": 3,
+    "type": "image",
+    "text": "¿Qué harías en esta situación?",
+    "image": "/assets/questions/final_situation.jpg",
+    "options": [
+      { "id": "A", "text": "Ayudar a todos", "tag": "colaboracion", "message": "🟢 Actitud cooperativa detectada." },
+      { "id": "B", "text": "Ignorar la situación", "tag": "rancio", "message": "🟡 Actitud evasiva detectada." }
+    ]
+  }
+]

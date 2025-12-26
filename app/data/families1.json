@@ -1,0 +1,274 @@
+{
+  "families": [
+    {
+      "id": "ingrid",
+      "display_name": "Can Somriure Electric",
+      "members": [
+        {
+          "name": "Ingrid",
+          "photo": "app/data/family_photos/CanSomriureElectric/ingrid.png",
+          "suspicious": false
+        },
+        {
+          "name": "Mivi",
+          "photo": "app/data/family_photos/CanSomriureElectric/mivi.png",
+          "suspicious": false
+        },
+        {
+          "name": "Lara",
+          "photo": "families/ingrid/lara1.jpg",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "id": "alexandra",
+      "display_name": "Familia Alexandra",
+      "members": [
+        {
+          "name": "Alexandra",
+          "photo": "families/alexandra/alexandra1.jpg",
+          "suspicious": true
+        },
+        {
+          "name": "Mateo",
+          "photo": "families/alexandra/mateo1.jpg",
+          "suspicious": false
+        },
+        {
+          "name": "Sofía",
+          "photo": "families/alexandra/sofia1.jpg",
+          "suspicious": false
+        }
+      ],
+      "special_message": "Se ha detectado un miembro de nacionalidad dudosa, vigilancia necesaria."
+    },
+    {
+      "id": "ona",
+      "display_name": "Familia Ona",
+      "members": [
+        {
+          "name": "Ona",
+          "photo": "families/ona/ona1.jpg",
+          "suspicious": false
+        },
+        {
+          "name": "Marc",
+          "photo": "families/ona/marc1.jpg",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "id": "aitana",
+      "display_name": "Familia Aitana",
+      "members": [
+        {
+          "name": "Aitana",
+          "photo": "families/aitana/aitana1.jpg",
+          "suspicious": false
+        },
+        {
+          "name": "Javier",
+          "photo": "families/aitana/javier1.jpg",
+          "suspicious": false
+        },
+        {
+          "name": "Clara",
+          "photo": "families/aitana/clara1.jpg",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "id": "marc",
+      "display_name": "Familia Marc",
+      "members": [
+        {
+          "name": "Marc",
+          "photo": "families/marc/marc1.jpg",
+          "suspicious": false
+        },
+        {
+          "name": "Anna",
+          "photo": "families/marc/anna1.jpg",
+          "suspicious": false
+        }
+      ]
+    },
+    {
+      "id": "luna",
+      "display_name": "Familia Luna",
+      "members": [
+        {
+          "name": "Luna",
+          "photo": "families/luna/luna1.jpg",
+          "suspicious": false
+        },
+        {
+          "name": "Leo",
+          "photo": "families/luna/leo1.jpg",
+          "suspicious": false
+        },
+        {
+          "name": "Mia",
+          "photo": "families/luna/mia1.jpg",
+          "suspicious": false
+        }
+      ]
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+{
+  "families": [
+    {
+      "id": "alexandra",
+      "display_name": "Can Talla L'Atalaya",
+      "needs_products": true,
+      "special_messages": [
+        "A sido verificada y aprobada su solicitud de acceso, pero se ha detectado un miembro de una nacionalidad clasificada. Por la seguridad de todos procederemos a una estricta vigilancia."
+      ],
+      "members": [
+        {
+          "id": "alexandra_01",
+          "name": "Alexandra",
+          "role": "valid"
+        },
+        {
+          "id": "alexandra_02",
+          "name": "Mireia",
+          "role": "valid"
+        },
+        {
+          "id": "alexandra_03",
+          "name": "Florin",
+          "role": "suspicious"
+        }
+      ]
+    },
+
+    {
+      "id": "ingrid",
+      "display_name": "Can Somriure Electric",
+      "needs_products": true,
+      "special_messages": [],
+      "members": [
+        {
+          "id": "ingrid_01",
+          "name": "Ingrid",
+          "role": "valid"
+        },
+        {
+          "id": "ingrid_02",
+          "name": "Mivi",
+          "role": "valid"
+        },
+        {
+          "id": "ingrid_03",
+          "name": "Uri",
+          "role": "valid"
+        }
+      ]
+    },
+
+    {
+      "id": "ona",
+      "display_name": "Can Paracetamotor",
+      "needs_products": false,
+      "special_messages": [],
+      "members": [
+        {
+          "id": "ona_01",
+          "name": "Ona",
+          "role": "valid"
+        },
+        {
+          "id": "ona_02",
+          "name": "Cesc",
+          "role": "valid"
+        }
+                {
+          "id": "ona_03",
+          "name": "Merce",
+          "role": "valid"
+        },
+        {
+          "id": "ona_04",
+          "name": "Riscu",
+          "role": "valid"
+        }
+      ]
+    },
+
+    {
+      "id": "aitana",
+      "display_name": "Familia Aitana",
+      "needs_products": false,
+      "special_messages": [],
+      "members": [
+        {
+          "id": "aitana_01",
+          "name": "Aitana",
+          "role": "valid"
+        },
+        {
+          "id": "aitana_02",
+          "name": "Hermano",
+          "role": "valid"
+        }
+      ]
+    },
+
+    {
+      "id": "martinez",
+      "display_name": "Familia Martínez",
+      "needs_products": true,
+      "special_messages": [],
+      "members": [
+        {
+          "id": "martinez_01",
+          "name": "Padre",
+          "role": "valid"
+        },
+        {
+          "id": "martinez_02",
+          "name": "Madre",
+          "role": "valid"
+        },
+        {
+          "id": "martinez_03",
+          "name": "Hija",
+          "role": "valid"
+        }
+      ]
+    },
+
+    {
+      "id": "rodriguez",
+      "display_name": "Familia Rodríguez",
+      "needs_products": false,
+      "special_messages": [],
+      "members": [
+        {
+          "id": "rodriguez_01",
+          "name": "Adulto",
+          "role": "valid"
+        },
+        {
+          "id": "rodriguez_02",
+          "name": "Acompañante",
+          "role": "valid"
+        }
+      ]
+    }
+  ]
+}

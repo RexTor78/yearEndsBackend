@@ -3,3 +3,7 @@ uvicorn
 python-multipart
 cloudinary
 pillow
+facenet-pytorch
+torch
+opencv-python
+numpy

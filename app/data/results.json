@@ -1,0 +1,12 @@
+{
+  "responses": [
+    {
+      "family": "Alexandra",
+      "question_id": 1,
+      "answer": "Voy a comprar más",
+      "tag": "cooperativo",
+      "score": 2,
+      "phase": "actitud"
+    }
+  ]
+}
