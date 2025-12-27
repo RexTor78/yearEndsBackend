@@ -11,9 +11,6 @@ import torch
 
 app = FastAPI()
 
-# =========================
-# CORS
-# =========================
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],  # Ajustar en producción
@@ -22,29 +19,23 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# =========================
-# Cloudinary config
-# =========================
 cloudinary.config(
     cloud_name=os.getenv("CLOUDINARY_CLOUD_NAME"),
     api_key=os.getenv("CLOUDINARY_API_KEY"),
     api_secret=os.getenv("CLOUDINARY_API_SECRET"),
 )
 
-# =========================
-# Cargar familias JSON
-# =========================
-with open("families.json", "r", encoding="utf-8") as f:
-    families_data = json.load(f)["families"]
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+FAMILIES_PATH = os.path.join(BASE_DIR, "families.json")
 
-# =========================
-# Modelos de reconocimiento facial
-# =========================
+with open(FAMILIES_PATH, "r", encoding="utf-8") as f:
+    families_data = json.load(f)
+
+
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 mtcnn = MTCNN(keep_all=True, device=device)
 resnet = InceptionResnetV1(pretrained='vggface2').eval().to(device)
 
-# Preprocesar embeddings de cada miembro
 family_embeddings = {}
 
 for family in families_data:
@@ -69,16 +60,10 @@ for family in families_data:
         "members": embeddings
     }
 
-# =========================
-# Root
-# =========================
 @app.get("/")
 async def root():
     return {"status": "Backend operativo"}
 
-# =========================
-# Upload selfie
-# =========================
 @app.post("/upload")
 async def upload_selfie(file: UploadFile = File(...)):
     if not file.content_type.startswith("image/"):
@@ -91,9 +76,6 @@ async def upload_selfie(file: UploadFile = File(...)):
         if not url:
             raise Exception("No se pudo obtener la URL")
 
-        # =========================
-        # Reconocimiento facial
-        # =========================
         uploaded_image = Image.open(BytesIO(await file.read())).convert("RGB")
         faces = mtcnn(uploaded_image)
         if faces is None:
@@ -101,7 +83,6 @@ async def upload_selfie(file: UploadFile = File(...)):
 
         uploaded_embeddings = resnet(faces.unsqueeze(0).to(device))
 
-        # Comparar con cada familia
         predictions = []
         for family_id, family in family_embeddings.items():
             for member in family["members"]:
@@ -118,7 +99,7 @@ async def upload_selfie(file: UploadFile = File(...)):
                     })
                     break  # con detectar 1 miembro basta
 
-        # Ordenar por confianza
+
         predictions = sorted(predictions, key=lambda x: x["confidence"], reverse=True)
 
         return {
